@@ -16,4 +16,12 @@ describe('Merge', function(){
  it('mergeSort', function(){
         expect(mergeSort([9,3,6,1,0,2])).toEqual([0,1,2,3,6,9]);
     });
+ it("con random", function() {
+        var array= new Array(6);
+        for (var i=0;i<array.length;i++){
+            array[i]=Math.floor(Math.random()*9+1)
+        }
+        var array2=array.slice(0)
+        expect(mergeSort(array)).toEqual(array2.sort());
+  });
 })
